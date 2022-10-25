@@ -1,0 +1,160 @@
+<!doctype html>
+
+<html lang="en">
+    
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Developer, musician, engineer</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Andrey">
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/projects.css">
+
+  <link rel="stylesheet" href="./css/mystyle.css">
+
+</head>
+
+<body class>
+
+
+    <header>
+
+        <h1 class="logo">My<span class="logo-b"> portfolio</span></h1>
+
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./myprojects.html">Projects</a></li>
+        </ul>
+
+    </header>
+
+
+
+    <div class="container p-5">
+
+        <img src="./img/Cpp.png" height="150" width="150" class="projects-padding-icon">
+
+        <div onclick="location.href='./pointdynamics.html';" class="row row-cols-12 projects-padding  rounded-9">
+
+            <div class="col-lg-7 col-sm-auto">
+                <img src="./img/pointdynamics2.png" class="projects-img">
+            </div>
+
+            <div class="col-lg-5 col-sm-auto">
+
+                <h2>Point dynamics</h2>
+
+                <p class="projects-text-description">This project was made in the autumn of 2019 during the study of theoretical mechanics. The goal was to create a program that allows one to simulate the movement of a material point as well as a 3D body in space. At the same time, this was my first C++ program ever that I wrote without YouTube or university teacher's guidance. Although not all the objectives were achieved, this project is considered to be a success.</p>
+            
+            </div>
+
+        </div>
+
+        <img src="./img/go.png" height="150" width="150" class="projects-padding-icon">
+
+
+        <div onclick="location.href='./Server.html';" class="row row-cols-12 float-end projects-padding" style="width: 100%">
+
+            <div class="col-lg-5 col-sm-auto">
+
+                <h2>Server</h2>
+
+                <p class="projects-text-description"> The server for this web site.<br/></p>
+                </p>
+
+            </div>
+
+            <div class="col-lg-7 col-sm-auto">
+                <img src="./img/Server.png"  class="projects-img">
+            </div>
+
+        </div>
+        
+        <img src="./img/Matlab.png" height="150" width="150" class="projects-padding-icon">
+
+        <div onclick="location.href='./plane.html';" class="projects-padding">
+
+            <div>
+
+                <h2>Plane model</h2>
+
+                <p class="projects-text-description">This model was made in march 2022. The aerodynamic model is partialy taken from Tu 154 and partialy is just made up. The autopilot uses complex logic to select different control laws depending on the situation, yet their coefficients are are constant under any conditions.</p>
+
+                </p>
+
+            </div>
+
+            <div >
+                <img src="./img/plane.jpg"  class="projects-img">
+            </div>
+
+        </div>
+
+        <h2>Oxygen project</h2>
+        <img src="./img/Oxygen.png" height="150" width="150" class="projects-padding-icon">
+
+
+        <div onclick="location.href='./OxygenVM.html';" class="row row-cols-12 projects-padding  rounded-9">
+
+            <div class="col-lg-7 col-sm-auto">
+                <img src="./img/VM.png" class="projects-img">
+            </div>
+
+            <div class="col-lg-5 col-sm-auto">
+
+                <h2>Oxygen virtual machine</h2>
+
+                <p class="projects-text-description">This project was created in the autumn of 2021, inspired by the video of Winderton about projects that every computer science student should try. 
+                    The architecture of this virtual machine was created using LC3 architecture as a 
+                    reference but is far from identical. There is also an assembly compiler, written (by me) for this machine.
+                </p>
+            </div>
+
+        </div>
+
+        <div onclick="location.href='./OxygenCompiler.html';" class="row row-cols-12 float-end projects-padding">
+
+            <div class="col-lg-5 col-sm-auto">
+
+                <h2>Oxygen compiler</h2>
+
+                <p class="projects-text-description">This is a compiler for Oxygen virtual machine. It features macroses, C-style definitions and includes as well as some built in functions. In outputs ".obj" file for the VM.</p>
+                </p>
+
+            </div>
+
+            <div class="col-lg-7 col-sm-auto">
+                <img src="./img/Compiler2.png" class="projects-img">
+            </div>
+
+        </div>
+
+        <div onclick="location.href='./OxygenEditor.html';" class="row row-cols-12 projects-padding  rounded-9">
+
+            <div class="col-lg-7 col-sm-auto">
+                <img src="./img/Editor.png" class="projects-img">
+            </div>
+
+            <div class="col-lg-5 col-sm-auto">
+
+                <h2>Oxygen editor</h2>
+
+                <p class="projects-text-description">This is the editor for Oxygen virtual machine, made with C# and WPF. It makes writing assembly code simplier by syntax highlighter. In order to compile your code, "python.exe" must be added to your PATH.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

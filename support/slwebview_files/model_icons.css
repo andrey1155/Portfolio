@@ -1,0 +1,15 @@
+.model0,
+.model1,
+.model2,
+.model3,
+.model4,
+.model5,
+.model6 { background-image: url('model_icons.png'); width: 16px; height: 16px; }
+
+.model0 { background-position: -0px; }
+.model1 { background-position: -16px; }
+.model2 { background-position: -32px; }
+.model3 { background-position: -48px; }
+.model4 { background-position: -64px; }
+.model5 { background-position: -80px; }
+.model6 { background-position: -96px; }

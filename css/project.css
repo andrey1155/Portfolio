@@ -1,0 +1,266 @@
+
+.header-scrollable{
+  position: static;
+  scroll-snap-align: start;
+}
+
+/*bg and basic*/
+
+h2{
+  text-align: center; 
+}
+
+body{
+  overflow-x: hidden;
+}
+
+html{
+  scroll-snap-type: y proximity;
+}
+
+section{
+  scroll-snap-align: start;
+}
+
+.bg-floating{
+  position: fixed; 
+  top: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-transparent p{
+  color: white;
+  width: 100%;
+  font-size: 4.3vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  text-align: center;
+}
+
+.bg-transparent div{
+  width: auto;   
+  width: 50%;  
+}
+
+.bg-transparent h1{
+  color: white;
+  text-align: center;
+
+  font-size: 60px;
+  padding-bottom: 9vh;
+}
+
+.bg-solid{
+
+  background-color:var(--bg-color); 
+  height:100vh;
+  width:100vw;
+
+  
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.bg-transparent{
+
+  width: 100vw;
+  height: 100vh; 
+
+  margin: 0;
+  padding: 0;
+
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* Video container */
+
+.slick-prev:before, .slick-next:before {
+  color: yellow;
+  visibility: hidden;
+}
+
+
+.vids-wrapper{
+  border: 1px solid red;
+
+  width: 75%;
+  height: auto;
+
+  margin: auto;
+
+  background-color: var(--darkest);
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.vids-wraper-inner{
+  padding-right: 10%;
+  padding-left: 10%;
+
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+  height: auto;
+
+  background-color: var(--brightest);
+  border-radius: 10px;
+}
+
+.imgplaceholder img{
+  margin: auto;
+  cursor: pointer;
+  height: 60vh;
+}
+
+.vids-holder{
+  border: 15px solid var(--darkest);
+  background-color: var(--brightest);
+}
+
+/* Video */
+
+.vid{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10000;
+
+  background: rgba(0,0,0,0.95);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.vid video{
+  position: relative;
+
+  width: 70vw;
+  height: 70vh;
+
+  outline: none;
+}
+
+.vid.active{
+
+  display: flex;
+
+  visibility: visible;
+  opacity: 1;
+}
+
+.close{
+  position: absolute;
+
+  top: 30px;
+  right: 30px;
+
+  max-height: 2vw;
+  max-width: 2vw;
+  cursor: pointer;
+
+  filter: invert(1);
+}
+
+/* Tree */
+
+#container{
+  margin-top: 7vh;
+}
+
+div li{
+  color: white;
+  font-size: large;
+  font-style: italic;
+}
+
+.tree-bg{
+  background-color: var(--darkest);
+  padding: 10;
+  border-radius: 10px;
+}
+
+#codespace{
+  background-color: var(--brightest);
+  margin-right: 1vw;
+  margin-left: 1vw;
+  border-radius: 10px;
+
+  height: 92%;
+}
+
+
+
+.my-tree {
+    list-style-type: none;
+  }
+
+.my-tree {
+    margin: 0;
+    padding: 0;
+  }
+
+.my-treeitem {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    background-color: var(--darkest);
+    width: 100%;  
+  }
+
+.my-treeitem:hover {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    background-color: var(--dark);
+    width: 100%;  
+  }
+
+.my-treelink{
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    background-color: var(--darkest);
+    width: 100%; 
+}
+
+.my-treelink:hover{
+    background-color: var(--dark);
+}
+
+.nested {
+    display: none;
+  }
+  
+.active {
+    display: block;
+  }
+
+
+
+/* Adaptive */
+
+@media (max-width: 900px){
+
+  .vid video{
+    max-width: 97%;
+  }
+
+  .close{
+    max-height: 30px;
+    max-width: 30px;
+  }
+
+}

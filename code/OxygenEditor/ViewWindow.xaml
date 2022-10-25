@@ -1,0 +1,68 @@
+﻿<Window x:Class="Editor.ViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Editor"
+        mc:Ignorable="d"
+        Name="MainWindow"
+        Title="ViewWindow" Height="450" Width="600">
+
+    <Border Background="#4D455C">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Grid.Column" Value="2"></Setter>
+                        <Setter Property="Width" Value="100"></Setter>
+                        <Setter Property="BorderThickness" Value="1"></Setter>
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Text color"/>
+                <Button Background="White"></Button>
+                <Label Grid.Row="1" Content="Instruction color"/>
+
+                <Label Grid.Row="2" Content="Instruction color"/>
+
+                <Label Grid.Row="3" Content="Spec word color"/>
+
+                <Label Grid.Row="4" Content="Number color"/>
+
+                <Label Grid.Row="5" Content="Directive color"/>
+
+                <Label Grid.Row="6" Content="Char color"/>
+
+                <Label Grid.Row="7" Content="String color"/>
+
+                <Label Grid.Row="8" Content="Coment color"/>
+
+                <Label Grid.Row="9" Content="String color"/>
+            </Grid>
+        </Grid>
+    </Border>
+    
+    
+</Window>

@@ -1,0 +1,36 @@
+
+.show{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plane-pitch{
+
+    height: 35vh;
+    width: 40vw;
+
+    padding: 1%;
+
+    border: 1px solid red;
+}
+
+.plane-pitch-b{
+    height: 17.5vh;
+}
+
+.plane-eqnContainer{
+
+    height: 90%;
+
+    text-align: center;
+    padding: 10%;
+    border: 1px solid red;
+}
+
+.plane-eqnContainer p{
+
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+}

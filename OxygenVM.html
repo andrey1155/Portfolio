@@ -1,0 +1,232 @@
+<!doctype html>
+
+<html lang="en">
+    
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Developer, musician, engineer</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Andrey">
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/project.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./css/styles/default.min.css">
+  <script src="./js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header-scrollable">
+
+        <h1 class="logo">My<span class="logo-b"> portfolio</span></h1>
+
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./myprojects.html">Projects</a></li>
+        </ul>
+
+    </header>
+
+
+    <img src="./img/phys1.jpg" class="bg-floating">
+
+
+        <section>
+        <div class="bg-transparent m-0" >
+
+            <div style="text-align: center;">
+                <h1 style="margin-top: 7vh;">Oxygen virtual machine</h1>
+                <p>This project was created in the autumn of 2021, inspired by the video of Winderton about projects that every computer science student should try. 
+                    The architecture of this virtual machine was created using LC3 architecture as a 
+                    reference but is far from identical. There is also an assembly compiler, written (by me) for this machine.
+                    
+                </p>
+
+                <a href="https://github.com/andrey1155/OxygenVM" type="button", class="btn btn-primary btn-lg">Open project on github</a>    
+
+            </div>       
+        
+        </div>
+        </section>
+
+        <section>
+        <div class="container-fluid bg-solid m-0" id ="container">
+    
+            <div class="row align-items-center  mx-5" style="height:100vh;">
+                
+                <h2>Here is the source code</h2>
+
+                <div class="col-3  tree-bg" style="height: 90vh;">
+                    <div class="my-treelink"><li>OxygenVM.cpp</li></div>  
+                </div>
+
+                <div class="col-9">
+
+                    <div style="height: 90vh;">    
+            
+                        <pre class="language-cpp tree-bg overflow-hidden" style="height: 100%; font-size: large;">
+                            <code id="codespace">      
+                            </code>
+                        </pre>
+                        
+                    </div>
+
+                </div>
+
+                <h2></h2>
+            </div>
+
+        </div>
+        </section>
+
+        </section>
+        <div class="container-fluid bg-solid">
+
+            <div class="row align-items-center"style="height:100%; padding: 5%;">
+
+                <h2 style="margin-top: 0%;">Here is the instuction set</h2>
+
+                <div class="col-6" style="height: 100%;"> 
+                    <h5>Registers</h5>
+
+                    <h6>General purpose registers</h6>
+                    <p> R0, R1, R2, R3, R4, BP, SP, BUFF</p>
+    
+                    <h6>Special registers</h6>
+                    <p> PC, COND, RSUB</p>
+    
+                    <h5>Floating point math instructions</h5>
+    
+                    <h6>Dual floating point instructions</h6>
+                    <p>
+    
+                    FADD, FSUB, FMUL, FDIV <br/>
+    
+                    FADD &lt;reg&gt;, &lt;reg&gt; <br/>
+    
+                    </p>
+                    <h6>Unry floating point instructions</h6>
+                    <p>
+                    EXP, SQRT, LN  <br/>
+    
+                    EXP, &lt;reg&gt;  <br/>
+                    </p>
+
+                    <h5>Math instructions</h5>
+                    <p>
+                    ADD, SUB, MUL, DIV, UDIV, AND, OR, NOT, XOR <br/>
+    
+                    ADD &lt;reg&gt;, &lt;reg&gt; <br/>
+                    ADD &lt;reg&gt;, &lt;8 bit value&gt; <br/>
+                    </p>
+                    <h5>Shift instruction</h5>
+                    <p> 
+                    SHIFT &lt;reg&gt; [&lt; | &gt;] &lt;value&gt;
+                    </p>
+                </div>
+
+                <div class="col-6" style="height: 100%;">
+                
+                    <h5> Memory instructions</h5>
+
+                    <p>
+                    LD, ST <br/>
+
+                    LD &lt;reg&gt;, &lt;reg&gt; <br/>
+                    LD &lt;reg&gt;, &lt;7 bit value&gt; <br/>
+
+                    LDB, LDBI, STB, STBI
+
+                    LDB &lt;reg&gt;, &lt;7 bit value&gt; <br/>
+
+                    MOV <br/>
+
+                    MOV &lt;any reg&gt;, &lt;any reg&gt; <br/>
+                    </p>
+
+
+                    <h5>Traps</h5>
+
+                    <p>
+                    INC, DEC, INV,  
+                    PUTI, PUTUI, PUTF, PUTC, GETC,
+                    PUSH, POP<br/>
+
+                    INC &lt;any reg&gt; <br/>
+
+                    HALT, RET, CLS <br/>
+
+                    </p>
+                    <h5>Controll flow instructions</h5>
+                    <p>
+                    BR  <br/>
+                    BRE BRL BRG BRLE BRGE BRNE <br/>
+
+                    BR &lt;label&gt; <br/>
+                    BR &lt;reg&gt;, &lt;optional value&gt; <br/>
+
+                    JSR <br/>
+                    JSR &lt;reg&gt;, &lt;optional value&gt; <br/>
+                    </p>
+
+                    <h5>Boolean instructions</h5>
+
+                    <p>
+                    CMP, BCMP, BINV <br/>
+
+                    CMP &lt;reg&gt;, &lt;reg&gt;<br/>
+                    CMP &lt;reg&gt;, &lt;value&gt; <br/>
+                    </p>
+
+                </div>
+
+            </div>
+            
+        </div>
+        </section>
+
+     
+    <script>hljs.highlightAll();</script>
+
+    <script>var folder = "OxygenVM";</script>
+
+    <script src="js/project.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    
+    <script type = "text/javascript">
+        $('.scroll').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            adaptiveHeight: true,
+        });
+    </script>
+
+</body>
+
+</html>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+ 

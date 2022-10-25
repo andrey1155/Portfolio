@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+    
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Developer, musician, engineer</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Andrey">
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/project.css">
+  <link rel="stylesheet" href="./css/plane.css">
+
+  <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./css/styles/default.min.css">
+  <script src="./js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header-scrollable">
+
+        <h1 class="logo">My<span class="logo-b"> portfolio</span></h1>
+
+        <ul class="navigation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./myprojects.html">Projects</a></li>
+        </ul>
+
+    </header>
+
+    <img src="./img/plane.jpg" class="bg-floating">
+
+
+    <section>
+        <div class="bg-transparent m-0" >     
+        
+            <div style="text-align: center;">
+
+                <h1 style="margin-top: 7vh;">Non linear plane model</h1>
+                <p>This model was made in march 2022. The aerodynamic model is partialy taken from Tu 154 and partialy is just made up. The autopilot uses complex logic to select different control laws depending on the situation, yet their coefficients are are constant under any conditions. You can inspect the model at the link below. </p>
+
+                <a href="webview.html" type="button", class="btn btn-primary btn-lg">Open model webview</a>
+
+            </div>  
+
+        </div>
+    </section>
+
+    <section>
+        <div class="bg-solid m-0">   
+
+            <div>
+
+                <h2 style="text-align: center; padding: 2%"> Equations</h2>
+
+                <div class="row">
+
+                    <div class="col-6 plane-eqnContainer">
+
+                        <h3 style="text-align: center; margin-bottom: 20%;"> Center of mass motion equations </h3>
+
+                        <p>\(\dot{V} = P\cos{\alpha}\cos{\beta} - X - mg\sin{\Theta}\)  
+                        </p>
+                        <p>
+                            \(\dot{\Theta} = P(\cos{\beta}\sin{\alpha}\cos{\gamma} - \sin{\beta}\cos{\alpha}\sin{\gamma}) +\) <br/>
+                            \( + (Y + Y_{elevator})\cos{\gamma} - mg\cos{\Theta} - (Z + Z_{rudder})\sin{\gamma}\)<br/>
+                        </p>
+    
+                        <p>           
+                            \(\dot{\Psi} = P(\cos{\beta}\sin{\alpha}\sin{\gamma} - \sin{\beta}\cos{\alpha}\cos{\gamma}) + \)  <br/>
+                            \( + (Y + Y_{elevator})\sin{\gamma} + (Z + Z_{rudder})\cos{\gamma}\)<br/>
+                        </p>
+                    </div>
+                    <div class="col-6 plane-eqnContainer">
+
+                        <h3 style="text-align: center; margin-bottom: 20%;"> Short-period motion equations </h3>
+
+                        <p>
+                            \(\dot{w_z} = -x_0Y - x_1Y_{elevator} - K_{w_z}w_z\)  
+                        </p>
+                        <p>
+                            \(\dot{w_x} = M_{aeleron} + y_0Z_{rudder} - K_{w_x}w_x + K_{w_y->w_x}w_y\)
+                        </p>
+    
+                        <p>           
+                            \(\dot{w_y} = -x_0Z - x_1Z_{rudder} - K_{w_y}w_y\)  
+                        </p>
+                    </div>
+                   
+
+                </div>
+            </div>  
+
+        </div>
+    </section>
+
+
+    <section>
+        <div class="bg-transparent m-0" >     
+        
+            <div style="display: flex; justify-content: center;">
+
+                <img src="img/flight.png" style="height: 80vh; width:auto;" alt="">
+
+            </div>  
+
+        </div>
+    </section>
+
+    <section>
+        <div class="bg-solid m-0" style="display: flex; justify-content: center; align-items: center;">     
+        
+            <div  style="display: flex; justify-content: center; align-items: center;">
+
+                <video  controls="true" src="vid/flight.mp4" style="height: 80vh; width:auto; margin: auto;" alt="">
+
+            </div>  
+
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="js/project.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/1.2.1/chartjs-plugin-zoom.min.js" integrity="sha512-klQv6lz2YR+MecyFYMFRuU2eAl8IPRo6zHnsc9n142TJuJHS8CG0ix4Oq9na9ceeg1u5EkBfZsFcV3U7J51iew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="js/forCharts.js"></script>
+    
+
+</body>
+
+</html>
+
+
+ 
