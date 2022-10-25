@@ -168,6 +168,11 @@ func Compile(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err)
 	}
 
+	path, err := os.Getwd()
+	if err != nil {
+		log.Println(err)
+	}
+
 	defer f.Close()
 
 	_, err2 := f.WriteString(string(b))
@@ -176,7 +181,9 @@ func Compile(w http.ResponseWriter, r *http.Request) {
 		log.Fatal(err2)
 	}
 
-	cmd := exec.Command("cmd.exe", "/C", "D:/Code/WebPortfolio/static/compiler/run.bat")
+	path = path + "\\compiler\\run.bat"
+
+	cmd := exec.Command(path)
 	cmd.Run()
 	cmd.Wait()
 
